@@ -2,6 +2,8 @@ class Board
   attr_accessor :cups
 
   def initialize(name1, name2)
+    @name1 = name1
+    @name2 = name2
     @cups = Array.new(14){[]}
     (0..5).each {|idx| @cups[idx] = [:stone, :stone, :stone, :stone]}
     (7..12).each {|idx| @cups[idx] = [:stone, :stone, :stone, :stone]}
@@ -18,10 +20,17 @@ class Board
   end
 
   def make_move(start_pos, current_player_name)
-    num_stones = @cups[start_pos].length
+    stones = @cups[start_pos].dup
     @cups[start_pos] = []
-    (1..num_stones).each do|idx|
-      @cups[(start_pos+idx)%14] = @cups[(start_pos+idx)%14] + [:stone]
+    i = 1
+    until stones == []
+      idx = (start_pos + i)%14
+      if idx != 6 && current_player_name == @name2
+        @cups[idx] = @cups[idx] + [stones.pop]
+      elsif idx != 13 && current_player_name == @name1
+        @cups[idx] = @cups[idx] + [stones.pop]
+      end
+      i += 1
     end
   end
 
