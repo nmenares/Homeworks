@@ -22,18 +22,23 @@ class Board
   def make_move(start_pos, current_player_name)
     stones = @cups[start_pos].dup
     @cups[start_pos] = []
-    i = 1
+    i = 0
     until stones == []
+      i += 1
       idx = (start_pos + i)%14
       if idx != 6 && current_player_name == @name2
         @cups[idx] = @cups[idx] + [stones.pop]
       elsif idx != 13 && current_player_name == @name1
         @cups[idx] = @cups[idx] + [stones.pop]
       end
-      i += 1
     end
     render
-    next_turn((start_pos + i)%14)
+    idx = (start_pos + i)%14
+    next_turn(idx)
+    return :switch if @cups[idx] == [:stone]
+    return :prompt if idx == 6 && current_player_name == @name1
+    return :prompt if idx == 13 && current_player_name == @name2
+    return idx if !@cups[idx].empty?
   end
 
   def next_turn(ending_cup_idx)
