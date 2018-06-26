@@ -53,5 +53,14 @@ class Board
   end
 
   def winner
+    stones_p1 = @cups[6].length
+    stones_p2 = @cups[13].length
+    if stones_p1 == stones_p2
+      :draw
+    elsif stones_p1 < stones_p2
+      @name2
+    else
+      @name1
+    end
   end
 end
