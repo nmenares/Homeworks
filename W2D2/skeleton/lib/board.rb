@@ -33,6 +33,7 @@ class Board
       i += 1
     end
     render
+    next_turn((start_pos + i)%14)
   end
 
   def next_turn(ending_cup_idx)
