@@ -13,6 +13,8 @@ class Board
   end
 
   def valid_move?(start_pos)
+    raise ArgumentError.new "Invalid starting cup" if start_pos > 14
+    raise ArgumentError.new "Starting cup is empty" if @cups[start_pos] == []
   end
 
   def make_move(start_pos, current_player_name)
