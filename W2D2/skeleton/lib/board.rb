@@ -35,9 +35,9 @@ class Board
     render
     idx = (start_pos + i)%14
     next_turn(idx)
+
+    return :prompt if idx == 6 || idx == 13
     return :switch if @cups[idx] == [:stone]
-    return :prompt if idx == 6 && current_player_name == @name1
-    return :prompt if idx == 13 && current_player_name == @name2
     return idx if !@cups[idx].empty?
   end
 
