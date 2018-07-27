@@ -1,14 +1,14 @@
 import React from 'react';
 
-class Calculator extends to React.component {
-  constructor(props) {
-    super(props);
+class Calculator extends React.Component{
+  constructor() {
+    super();
   }
 
   render() {
       return (
       <div>
-        <h1>Hello World</h1> 
+        <h1>Hello World</h1>
       </div>
     );
   }
