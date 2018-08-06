@@ -1,0 +1,140 @@
+body{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navBar {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(231, 231, 222, 0.8);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+}
+
+.logo-user{
+  display: flex;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  align-items: center;
+}
+
+.logo-user img{
+  widht: 40px;
+  height: 40px;
+  padding-right: 20px;
+}
+
+
+a{
+  padding: 10px;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 10px;
+  padding-left: 0;
+  margin: auto;
+}
+
+.user-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.actions {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+}
+
+.body {
+  display: flex;
+  margin: 20px;
+}
+
+.index-lists {
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.index-lists ul{
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+
+}
+
+.index-lists li{
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  padding-top: 10px;
+  margin: 10px;
+  text-align: left;
+}
+
+.listas {
+  margin: 20px;
+  display: flex;
+}
+
+.list h3{
+  text-align: center;
+  color: green;
+}
+
+.list li{
+  margin: 10px;
+  border-radius: 5px;
+  background-color:rgb(172, 215, 167, 0.5);
+  padding: 5px;
+  width: 200px;
+  flex: left;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  padding: 5px;
+  list-style: none;
+  font-size: 15px;
+}
+
+footer {
+  text-align: center;
+  margin: auto;
+  background-color:rgb(73, 105, 70);
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+
+.

@@ -1,0 +1,14 @@
+body {
+  background-image: url('splash.jpg');
+}
+
+h1 {
+  background-color: rgba(231, 231, 222, 0.8);
+  width: max-content;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  padding: 30px;
+  margin: auto;
+  text-align: center;
+  margin-top: 100px;
+}
